@@ -1,259 +1,144 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2025.1 (64-bit)                              -->
-<!--                                                                         -->
-<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
-<!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
-<Project Product="Vivado" Version="7" Minor="70" Path="D:/Btech/internship/intern_prj/intern_prj/Basys3_7seg_disp/Basys3_7seg_disp/Basys3_7seg_disp.xpr">
-  <DefaultLaunch Dir="$PRUNDIR"/>
-  <Configuration>
-    <Option Name="Id" Val="22362ddca38b490eb6c8c81d2232ecab"/>
-    <Option Name="Part" Val="xc7a35tcpg236-1"/>
-    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
-    <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
-    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
-    <Option Name="SimulatorInstallDirModelSim" Val=""/>
-    <Option Name="SimulatorInstallDirQuesta" Val=""/>
-    <Option Name="SimulatorInstallDirXcelium" Val=""/>
-    <Option Name="SimulatorInstallDirVCS" Val=""/>
-    <Option Name="SimulatorInstallDirRiviera" Val=""/>
-    <Option Name="SimulatorInstallDirActiveHdl" Val=""/>
-    <Option Name="SimulatorGccInstallDirModelSim" Val=""/>
-    <Option Name="SimulatorGccInstallDirQuesta" Val=""/>
-    <Option Name="SimulatorGccInstallDirXcelium" Val=""/>
-    <Option Name="SimulatorGccInstallDirVCS" Val=""/>
-    <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
-    <Option Name="SimulatorGccInstallDirActiveHdl" Val=""/>
-    <Option Name="SimulatorVersionXsim" Val="2025.1"/>
-    <Option Name="SimulatorVersionModelSim" Val="2024.3"/>
-    <Option Name="SimulatorVersionQuesta" Val="2024.3_3"/>
-    <Option Name="SimulatorVersionXcelium" Val="21.09.009"/>
-    <Option Name="SimulatorVersionVCS" Val="S-2021.09"/>
-    <Option Name="SimulatorVersionRiviera" Val="2024.10"/>
-    <Option Name="SimulatorVersionActiveHdl" Val="15.0"/>
-    <Option Name="SimulatorGccVersionXsim" Val="9.3.0"/>
-    <Option Name="SimulatorGccVersionModelSim" Val="7.4.0"/>
-    <Option Name="SimulatorGccVersionQuesta" Val="7.4.0"/>
-    <Option Name="SimulatorGccVersionXcelium" Val="9.3.0"/>
-    <Option Name="SimulatorGccVersionVCS" Val="9.2.0"/>
-    <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
-    <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
-    <Option Name="TargetLanguage" Val="VHDL"/>
-    <Option Name="BoardPart" Val=""/>
-    <Option Name="ActiveSimSet" Val="sim_1"/>
-    <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
-    <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
-    <Option Name="IPCachePermission" Val="read"/>
-    <Option Name="IPCachePermission" Val="write"/>
-    <Option Name="EnableCoreContainer" Val="FALSE"/>
-    <Option Name="EnableResourceEstimation" Val="FALSE"/>
-    <Option Name="SimCompileState" Val="TRUE"/>
-    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
-    <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
-    <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
-    <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="5"/>
-    <Option Name="WTModelSimLaunchSim" Val="0"/>
-    <Option Name="WTQuestaLaunchSim" Val="0"/>
-    <Option Name="WTIesLaunchSim" Val="0"/>
-    <Option Name="WTVcsLaunchSim" Val="0"/>
-    <Option Name="WTRivieraLaunchSim" Val="0"/>
-    <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
-    <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
-    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
-    <Option Name="XSimRadix" Val="hex"/>
-    <Option Name="XSimTimeUnit" Val="ns"/>
-    <Option Name="XSimArrayDisplayLimit" Val="1024"/>
-    <Option Name="XSimTraceLimit" Val="65536"/>
-    <Option Name="SimTypes" Val="rtl"/>
-    <Option Name="SimTypes" Val="bfm"/>
-    <Option Name="SimTypes" Val="tlm"/>
-    <Option Name="SimTypes" Val="tlm_dpi"/>
-    <Option Name="MEMEnableMemoryMapGeneration" Val="TRUE"/>
-    <Option Name="DcpsUptoDate" Val="TRUE"/>
-    <Option Name="UseInlineHdlIP" Val="TRUE"/>
-    <Option Name="LocalIPRepoLeafDirName" Val="ip_repo"/>
-  </Configuration>
-  <FileSets Version="1" Minor="32">
-    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
-      <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/display_twosix_may.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="counter_seg"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
-      <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/pins.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="ConstrsType" Val="XDC"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
-      <Filter Type="Srcs"/>
-      <Config>
-        <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="counter_seg"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="TransportPathDelay" Val="0"/>
-        <Option Name="TransportIntDelay" Val="0"/>
-        <Option Name="SelectedSimModel" Val="rtl"/>
-        <Option Name="PamDesignTestbench" Val=""/>
-        <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
-        <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
-        <Option Name="PamPseudoTop" Val="pseudo_tb"/>
-        <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="CosimPdi" Val=""/>
-        <Option Name="CosimPlatform" Val=""/>
-        <Option Name="CosimElf" Val=""/>
-        <Option Name="Dmv" Val=""/>
-      </Config>
-    </FileSet>
-    <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
-      <Filter Type="Utils"/>
-      <File Path="$PSRCDIR/utils_1/imports/synth_1/counter_seg.dcp">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedInSteps" Val="synth_1"/>
-          <Attr Name="AutoDcp" Val="1"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopAutoSet" Val="TRUE"/>
-      </Config>
-    </FileSet>
-  </FileSets>
-  <Simulators>
-    <Simulator Name="XSim">
-      <Option Name="Description" Val="Vivado Simulator"/>
-      <Option Name="CompiledLib" Val="0"/>
-    </Simulator>
-    <Simulator Name="ModelSim">
-      <Option Name="Description" Val="ModelSim Simulator"/>
-    </Simulator>
-    <Simulator Name="Questa">
-      <Option Name="Description" Val="Questa Advanced Simulator"/>
-    </Simulator>
-    <Simulator Name="Riviera">
-      <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
-    </Simulator>
-  </Simulators>
-  <Runs Version="1" Minor="22">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/counter_seg.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-  </Runs>
-  <MsgRule>
-    <MsgAttr Name="RuleType" Val="0"/>
-    <MsgAttr Name="Limit" Val="-1"/>
-    <MsgAttr Name="NewSeverity" Val="ANY"/>
-    <MsgAttr Name="Id" Val="[BD 41-1306]"/>
-    <MsgAttr Name="Severity" Val="ANY"/>
-    <MsgAttr Name="ShowRule" Val="1"/>
-    <MsgAttr Name="RuleSource" Val="2"/>
-    <MsgAttr Name="StringIsRegExp" Val="0"/>
-    <MsgAttr Name="RuleId" Val="1"/>
-    <MsgAttr Name="Note" Val=""/>
-    <MsgAttr Name="Author" Val=""/>
-    <MsgAttr Name="CreatedTimestamp" Val=""/>
-  </MsgRule>
-  <MsgRule>
-    <MsgAttr Name="RuleType" Val="0"/>
-    <MsgAttr Name="Limit" Val="-1"/>
-    <MsgAttr Name="NewSeverity" Val="ANY"/>
-    <MsgAttr Name="Id" Val="[BD 41-1271]"/>
-    <MsgAttr Name="Severity" Val="ANY"/>
-    <MsgAttr Name="ShowRule" Val="1"/>
-    <MsgAttr Name="RuleSource" Val="2"/>
-    <MsgAttr Name="StringIsRegExp" Val="0"/>
-    <MsgAttr Name="RuleId" Val="2"/>
-    <MsgAttr Name="Note" Val=""/>
-    <MsgAttr Name="Author" Val=""/>
-    <MsgAttr Name="CreatedTimestamp" Val=""/>
-  </MsgRule>
-  <Board/>
-  <DashboardSummary Version="1" Minor="0">
-    <Dashboards>
-      <Dashboard Name="default_dashboard">
-        <Gadgets>
-          <Gadget Name="drc_1" Type="drc" Version="1" Row="2" Column="0">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="impl_1#impl_1_route_report_drc_0 "/>
-          </Gadget>
-          <Gadget Name="methodology_1" Type="methodology" Version="1" Row="2" Column="1">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="impl_1#impl_1_route_report_methodology_0 "/>
-          </Gadget>
-          <Gadget Name="power_1" Type="power" Version="1" Row="1" Column="0">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="impl_1#impl_1_route_report_power_0 "/>
-          </Gadget>
-          <Gadget Name="timing_1" Type="timing" Version="1" Row="0" Column="1">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="impl_1#impl_1_route_report_timing_summary_0 "/>
-          </Gadget>
-          <Gadget Name="utilization_1" Type="utilization" Version="1" Row="0" Column="0">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="synth_1#synth_1_synth_report_utilization_0 "/>
-            <GadgetParam Name="RUN.STEP" Type="string" Value="synth_design"/>
-            <GadgetParam Name="RUN.TYPE" Type="string" Value="synthesis"/>
-          </Gadget>
-          <Gadget Name="utilization_2" Type="utilization" Version="1" Row="1" Column="1">
-            <GadgetParam Name="REPORTS" Type="string_list" Value="impl_1#impl_1_place_report_utilization_0 "/>
-          </Gadget>
-        </Gadgets>
-      </Dashboard>
-      <CurrentDashboard>default_dashboard</CurrentDashboard>
-    </Dashboards>
-  </DashboardSummary>
-</Project>
+entity counter_seg is
+    Port ( clk  : in STD_LOGIC;
+           btnC : in STD_LOGIC;
+           an   : out STD_LOGIC_VECTOR (3 downto 0);
+           seg  : out STD_LOGIC_VECTOR (6 downto 0));
+end counter_seg;
+
+architecture Behavioral of counter_seg is
+signal clk_div  : integer range 0 to 9999999;
+signal clk_slow : STD_LOGIC:= '0';
+signal unit : integer range 0 to 9 := 0;
+signal tens : integer range 0 to 9:= 0;
+signal hun  : integer range 0 to 9 := 0;
+signal thou : integer range 0 to 9 := 0;
+
+signal digit_active : integer range 0 to 3:=0 ;
+    --signal to track which digit we are currently working on (0 to 3)
+signal word_active : STD_LOGIC := '0'; 
+    --signal to track if we are in Counting number or Word
+
+function segmt (num : integer) return STD_LOGIC_VECTOR is
+begin 
+case num is 
+    when 0 => return "1000000";
+    when 1 => return "1111001";
+    when 2 => return "0100100";
+    when 3 => return "0110000";
+    when 4 => return "0011001";
+    when 5 => return "0010010";
+    when 6 => return "0000010"; 
+    when 7 => return "1111000";
+    when 8 => return "0000000";
+    when 9 => return "0010000";
+    when others => return "1111111";
+end case;
+end function;
+
+function seg_char (char : integer) return STD_LOGIC_VECTOR is
+begin
+    case char is
+        when 0 => return "0001110"; --F
+        when 1 => return "0001100"; --P
+        when 2 => return "0000010"; --G
+        when 3 => return "0001000"; --A
+        when others => return "1111111";
+    end case;
+end function;
+
+begin
+--1
+process(clk,btnC)
+begin
+    if btnC = '1' then
+        clk_div  <= 0;
+        clk_slow <= '0';
+    elsif rising_edge(clk) then
+        if clk_div = 9999999 then
+            clk_div <= 0;
+            clk_slow <= not clk_slow;
+        else
+            clk_div <= clk_div + 1;
+        end if;
+    end if;
+end process;
+
+--2
+process(clk_slow, btnC)
+begin
+    if btnC = '1' then
+        unit <= 0; tens <=0; hun <=0; thou <=0;
+        digit_active <= 0;
+        word_active <= '0';
+    elsif rising_edge(clk_slow) then
+        if word_active = '0' then
+            if digit_active = 0 then
+                if unit = 9 then
+                    unit <= 0;
+                    digit_active <= 1;
+                else
+                    unit <= unit + 1;
+                end if;
+            elsif digit_active = 1 then
+                if tens = 9 then
+                    tens <= 0;
+                    digit_active <= 2;
+                else
+                    tens <= tens + 1;
+                end if;
+            elsif digit_active = 2 then
+                if hun = 9 then
+                    hun <= 0;
+                    digit_active <= 3;
+                else
+                    hun <= hun + 1;
+                end if;
+            elsif digit_active = 3 then
+                if thou = 9 then
+                    thou <= 0;
+                    word_active <= '1'; 
+                else
+                    thou <= thou + 1;
+                end if;
+            end if;
+        else
+          
+            if digit_active = 3 then
+                digit_active <= 0;
+            else
+                digit_active <= digit_active + 1;
+            end if;
+        end if;
+    end if;
+end process;
+
+
+--3
+process(digit_active,word_active,unit,tens,hun,thou)
+begin
+    an<="1111";
+    seg<="1111111";
+    if word_active = '0' then
+        case digit_active is 
+            when 0 => an <= "1110"; seg <= segmt(unit);
+            when 1 => an <= "1101"; seg <= segmt(tens);
+            when 2 => an <= "1011"; seg <= segmt(hun);
+            when 3 => an <= "0111"; seg <= segmt(thou);
+            when others => an<="1111"; seg<="1111111";
+        end case; 
+    else
+        case digit_active is 
+            when 0 => an <= "0111"; seg <= seg_char(0);
+            when 1 => an <= "1011"; seg <= seg_char(1);
+            when 2 => an <= "1101"; seg <= seg_char(2);
+            when 3 => an <= "1110"; seg <= seg_char(3);
+            when others => an<="1111"; seg<="1111111";
+        end case; 
+   end if;
+end process;
+
+end Behavioral;
