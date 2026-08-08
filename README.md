@@ -73,6 +73,3 @@ The whole sequence takes roughly 8 seconds from reset to reaching the letter dis
 - Use the decimal point for a clock-style `MM:SS` display
 - Add a testbench for the Vivado Simulator (the project is already set up for mixed-language simulation)
 
-## License
-
-No LICENSE file in the repo yet — add one (e.g. MIT) if you'd like to make reuse terms explicit.
