@@ -23,8 +23,8 @@ VHDL design for the Digilent **Basys3** (Xilinx Artix-7) FPGA board that drives 
 
 ```
 .
-├── counter_seg.vhd    # Top-level design: clock divider, counting FSM, display driver
-├── constraints.xdc     # Pin constraints for the Basys3 (add — see Pin Constraints below)
+├── counter_seg.vhd   # Top-level design: clock divider, counting FSM, display driver
+├── pins.xdc            # Pin constraints for the Basys3 board
 └── README.md
 ```
 
@@ -56,52 +56,12 @@ The whole sequence takes roughly 8 seconds from reset to reaching the letter dis
 
 **4. Reset.** Driving `btnC` high asynchronously clears every counter, `digit_active`, and `word_active`, restarting from `0000`.
 
-## Pin Constraints
-
-Add an `.xdc` file mapping `clk`, `btnC`, `an`, and `seg` to the board. This is the standard Basys3 pinout for those signals:
-
-```tcl
-## Clock signal
-set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports clk]
-create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
-
-##7 Segment Display
-set_property -dict { PACKAGE_PIN W7   IOSTANDARD LVCMOS33 } [get_ports {seg[0]}]
-set_property -dict { PACKAGE_PIN W6   IOSTANDARD LVCMOS33 } [get_ports {seg[1]}]
-set_property -dict { PACKAGE_PIN U8   IOSTANDARD LVCMOS33 } [get_ports {seg[2]}]
-set_property -dict { PACKAGE_PIN V8   IOSTANDARD LVCMOS33 } [get_ports {seg[3]}]
-set_property -dict { PACKAGE_PIN U5   IOSTANDARD LVCMOS33 } [get_ports {seg[4]}]
-set_property -dict { PACKAGE_PIN V5   IOSTANDARD LVCMOS33 } [get_ports {seg[5]}]
-set_property -dict { PACKAGE_PIN U7   IOSTANDARD LVCMOS33 } [get_ports {seg[6]}]
-
-set_property -dict { PACKAGE_PIN V7   IOSTANDARD LVCMOS33 } [get_ports dp]
-
-set_property -dict { PACKAGE_PIN U2   IOSTANDARD LVCMOS33 } [get_ports {an[0]}]
-set_property -dict { PACKAGE_PIN U4   IOSTANDARD LVCMOS33 } [get_ports {an[1]}]
-set_property -dict { PACKAGE_PIN V4   IOSTANDARD LVCMOS33 } [get_ports {an[2]}]
-set_property -dict { PACKAGE_PIN W4   IOSTANDARD LVCMOS33 } [get_ports {an[3]}]
-
-
-##Buttons
-set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports btnC]
-
-## Configuration options, can be used for all designs
-set_property CONFIG_VOLTAGE 3.3 [current_design]
-set_property CFGBVS VCCO [current_design]
-
-## SPI configuration mode options for QSPI boot, can be used for all designs
-set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
-set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
-set_property CONFIG_MODE SPIx4 [current_design]
-
-```
-
 ## Getting Started
 
 1. Clone this repository
-2. In Vivado, create an RTL project targeting part `xc7a35tcpg236-1`
-3. Add `.vhd` as a design source and set `counter_seg` as the top module
-4. Add an `.xdc` constraints file (see [Pin Constraints](#pin-constraints)) as a constraints source
+2. In Vivado, create a new RTL project targeting part `xc7a35tcpg236-1`
+3. Add `counter_seg.vhd` as a design source and set `counter_seg` as the top module
+4. Add `pins.xdc` as the constraints source
 5. Run Synthesis → Implementation → Generate Bitstream
 6. Program the Basys3 board; press `btnC` to reset and restart the sequence
 
@@ -115,4 +75,4 @@ set_property CONFIG_MODE SPIx4 [current_design]
 
 ## License
 
-No license chosen yet — consider adding one (e.g. MIT) if you plan to make this repository public.
+No LICENSE file in the repo yet — add one (e.g. MIT) if you'd like to make reuse terms explicit.
