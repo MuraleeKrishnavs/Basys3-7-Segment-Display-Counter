@@ -100,7 +100,7 @@ set_property CONFIG_MODE SPIx4 [current_design]
 
 1. Clone this repository
 2. In Vivado, create an RTL project targeting part `xc7a35tcpg236-1`
-3. Add `counter_seg.vhd` as a design source and set `counter_seg` as the top module
+3. Add `.vhd` as a design source and set `counter_seg` as the top module
 4. Add an `.xdc` constraints file (see [Pin Constraints](#pin-constraints)) as a constraints source
 5. Run Synthesis → Implementation → Generate Bitstream
 6. Program the Basys3 board; press `btnC` to reset and restart the sequence
