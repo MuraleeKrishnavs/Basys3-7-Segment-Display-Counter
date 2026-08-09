@@ -72,4 +72,7 @@ The whole sequence takes roughly 8 seconds from reset to reaching the letter dis
 - Add a switch or button to pause/freeze the count
 - Use the decimal point for a clock-style `MM:SS` display
 - Add a testbench for the Vivado Simulator (the project is already set up for mixed-language simulation)
-
+- 
+## License
+ 
+Licensed under the [MIT License](LICENSE) — free to use, modify, and share, with attribution.
